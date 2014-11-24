@@ -1,0 +1,9 @@
+
+<!-- If User is logged in, render their list. -->
+<% if session[:token] %>
+  <%= redirect '/list' %>
+<!-- Else, direct them to login screen. -->
+<% else %>
+  <%= erb :"users/index" %>
+<% end %>
+

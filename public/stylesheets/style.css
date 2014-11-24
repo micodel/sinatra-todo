@@ -1,0 +1,146 @@
+
+/**************/
+/* Formatting */
+/**************/
+
+h1,
+h3,
+hr,
+p {
+  margin: 0;
+}
+
+h2 {
+  margin: 15px;
+}
+
+body {
+  background-color: #E5E5E5; /* Grey */
+}
+
+#container {
+  height: 500px;
+  width: 350px;
+
+  margin: 0 auto;
+  margin-top: 20px;
+  border: 2px solid #000000; /* Black */
+  box-shadow: 5px 5px 15px 0px #000000; /* Black */
+}
+
+#content {
+  height: 400px;
+  box-sizing: border-box;
+
+  padding: 15px;
+
+  background-color: #FFFFFF; /* White */
+  overflow: scroll;
+}
+
+.message {
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+.section {
+  margin-top: 10px;
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+
+/**************/
+/*   Header   */
+/**************/
+
+#header {
+  height: 100px;
+  box-sizing: border-box;
+
+  padding: 10px 5px 0px 5px;
+
+  text-align: center;
+
+  background-color: #FFFFFF; /* White */
+}
+
+#title {
+  padding-bottom: 15px;
+
+  color: #000000; /* Black */
+}
+
+#home_button {
+  text-decoration: none;
+}
+
+#new_task_button,
+#logout_button {
+  padding: 5px;
+
+  color: #000000; /* Black */
+  text-decoration: none;
+
+  border: 1px solid #000000; /* Black */
+}
+
+#new_task_button {
+  margin-right: 10px;
+  padding: 5px 10px;
+
+  font-weight: bold;
+  text-align: center;
+}
+
+
+/*************/
+/*   Tasks   */
+/*************/
+.item {
+  width: 290px;
+  box-sizing: border-box;
+
+  border-top: 1px solid #CCCCCC; /* Light Grey */
+  border-bottom: 3px solid #000000; /* Black */
+  border-right: 2px solid #000000; /* Black */
+  border-left: 1px solid #CCCCCC; /* Light Grey */
+}
+
+.description {
+  width: 85%;
+  box-sizing: border-box;
+
+  padding-left: 5px;
+}
+
+.edit_button,
+.disabled_edit_button {
+  width: 15%;
+  opacity: 0;
+}
+
+.edit_button a {
+  color: #000000; /* Black */
+  text-decoration: none;
+}
+
+.edit_button:hover {
+  opacity: 1;
+}
+
+.complete {
+  text-decoration: line-through;
+  background-color: #DCDCDC; /* Gainsboro */
+}
+
+.spacer {
+  height: 6px;
+}
+
+/* New / Edit Task */
+textarea {
+  height: 25px;
+  width: 250px;
+}
+

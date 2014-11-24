@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <title>To Do List</title>
+
+    <link rel="stylesheet" href="/stylesheets/normalize.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <script src="/scripts/app.js"></script>
+  </head>
+
+  <body>
+    <div id="container">
+      <%= erb :_header %>
+
+      <div id="content">
+        <%= yield %>
+      </div>
+    <div>
+  </body>
+
+</html>

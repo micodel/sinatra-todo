@@ -1,0 +1,51 @@
+
+<% if @list.empty? %>
+  <p class="message"> Your List Is Empty </p>
+  <br />
+  <p class="message"> Click the plus button above to add a new item </p>
+<% else %>
+  <div id="incomplete_tasks">
+    <% @list.each do |list_item| %>
+      <table>
+        <tbody>
+          <% if list_item["is_complete"] == false %>
+            <tr class="item">
+              <td>
+                <form method="post" action=<%="/list/#{list_item['id']}/complete"%>>
+                  <input type="checkbox" onclick="this.form.submit();">
+                </form>
+              </td>
+              <td class="description"><p><%= list_item["description"] %> </p></td>
+              <td class="edit_button"><a href=<%="/list/#{list_item['id']}/edit"%>><button> Edit </button></a></td>
+            </tr>
+            <tr class="spacer"></tr>
+          <% end %>
+        </tbody>
+      </table>
+    <% end %>
+  </div>
+
+
+  <div id="complete_tasks">
+    <% @list.each do |list_item| %>
+      <table>
+        <tbody>
+          <% if list_item["is_complete"] == true %>
+            <tr class="item complete">
+              <td>
+                <form method="post" action=<%="/list/#{list_item['id']}/complete"%>>
+                  <input type="checkbox" onclick="this.form.submit();" checked>
+                </form>
+              </td>
+              <td class="description"><p><%= list_item["description"] %> </p></td>
+              <td class="disabled_edit_button"></td>
+            </tr>
+            <tr class="spacer"></tr>
+          <% end %>
+        </tbody>
+      </table>
+    <% end %>
+  </div>
+
+<% end %>
+
